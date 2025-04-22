@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import showdown from 'showdown';
+const converter = new showdown.Converter();
 
 const ChatForm = () => {
     const [chat, setChat] = useState('');
@@ -167,7 +169,11 @@ const ChatForm = () => {
 
             {/* Vraagkaart */}
             <div className="bg-white w-full max-w-3xl rounded-2xl shadow-lg p-6 border-4 border-yellow-300 text-lg">
-                <p className="mb-4">🐶 <strong>Vraag:</strong> {vraag}</p>
+                <div
+                    className="mb-4"
+                    dangerouslySetInnerHTML={{__html: `🐶 <strong>Vraag:</strong> ${converter.makeHtml(vraag)}`}}
+                />
+
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                     <input
