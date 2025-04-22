@@ -3,12 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://github.com/ElisaZornig/sommenGenerator", // Add this line
+  "homepage": "https://github.com/ElisaZornig/sommenGenerator",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build", // Add this line
-    "deploy": "gh-pages -d dist" // Add this line
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
